@@ -1,0 +1,111 @@
+/*:root => declara variaveis para usar no css e outros arquivos*/
+:root{
+    --vermelho: #e50914;
+    --preto: #141414;
+    --Cinza: #aaa;
+
+}
+
+/* * => Todo HTML   */
+* { /*reseta configurações para que todos navegadores fiquem iguais*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*limite todo conteudo a ficar dentro e não expande box*/
+}
+
+body{
+    height: 100vh;
+    background: var(--preto);
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+}
+
+header .container{    
+    display: flex; /*coloca na mesma linha; padrão flex-direction:row*/ 
+    flex-direction: row;   
+    align-items: center;
+    justify-content: space-between;/*espaço entre divs;caso aqui h2 e nav*/
+}
+
+header .logo {
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial black', Times;
+    font-size: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--Cinza);
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+.container{
+    margin-left: 20px;
+}
+/*Filme Principal*/
+.FilmePrincipal {
+    height: 60vh;
+    font-size: 16px;
+                     /*     cria camada em cima da imagem(.50) preto*/
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50) 100%), url(/img/capa-house.jpg);
+    height: 400px;
+    background-size: cover;/*preenche box*/
+    display: flex;
+    flex-direction: column;/*column=>linha ; row=> coluna*/
+    justify-content: center;
+    align-items: flex-start; /*começa da esquerda*/
+}
+
+.FilmePrincipal .container {
+    width: 60%;
+    height: 60vh;
+}
+
+.FilmePrincipal .descricao{
+    height: 10%;
+    margin-top: 10px;
+    margin-bottom: 90px;
+}
+
+.FilmePrincipal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: #fff;
+    padding: 15px 30px;/*1)todos os lados; 2)eixo X , eixo Y*/    
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;/*altera cursor para mão*/
+    transition: .3s ease all;/*transição ;não tá no manual,kkk*/
+}
+
+.botao:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.Carrousel_Filmes {
+    height: 50vh;  
+    margin-top: 10px;
+}
